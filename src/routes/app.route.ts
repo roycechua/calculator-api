@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { addTransaction, addUser, getTransactions } from '../controllers/app.controller';
+import { addTransaction, addUser, deleteTransactions, getTransactions } from '../controllers/app.controller';
 import { authMiddleware } from '../middlewares/app.middleware';
 
 const appRoute = Router();
