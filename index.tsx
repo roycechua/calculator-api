@@ -3,13 +3,15 @@ require('dotenv').config();
 import express, { Application, Request, Response } from 'express';
 import 'reflect-metadata';
 import { AppDataSource } from './src/database';
+import appRoute from './src/routes/app.route';
+
 
 const app: Application = express();
 const PORT = 3000;
 
 AppDataSource.initialize()
     .then(() => {
-        console.log("DB Connection Successful!")
+        console.log('DB Connection Successful!');
     })
     .catch((error) => console.log(error));
 
@@ -22,6 +24,8 @@ app.get('/', async (req: Request, res: Response): Promise<Response> => {
         message: 'Hello World!',
     });
 });
+
+app.use('/app', appRoute);
 
 try {
     app.listen(PORT, (): void => {

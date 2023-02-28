@@ -9,7 +9,7 @@ export class Transactions {
     user: string
 
     @Column()
-    preview: string
+    calculation: string
 
     @Column()
     result: number
