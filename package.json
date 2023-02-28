@@ -1,0 +1,29 @@
+{
+  "name": "calculator-api",
+  "version": "1.0.0",
+  "description": "API for rn-calculator-app",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ts-node-dev ./index.ts",
+    "start": "tsc && node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roycechua/calculator-api.git"
+  },
+  "author": "Royce Chua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roycechua/calculator-api/issues"
+  },
+  "homepage": "https://github.com/roycechua/calculator-api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.14.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
+  }
+}
