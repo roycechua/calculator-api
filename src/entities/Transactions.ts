@@ -14,7 +14,7 @@ export class Transactions {
     @Column()
     result: number
 
-    @Column({ type: 'timestamptz' })
+    @Column({ type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
     date_time_with_timezone: Date;
 
     @CreateDateColumn()

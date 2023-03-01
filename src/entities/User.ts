@@ -17,7 +17,7 @@ export class User {
     @Column()
     os: string;
 
-    @Column({ type: 'timestamptz' })
+    @Column({ type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
     date_time_with_timezone: Date;
 
     @CreateDateColumn()
