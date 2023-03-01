@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { AppDataSource } from '../database';
-import { Transactions } from '../entities/Transaction';
+import { Transaction } from '../entities/Transaction';
 import { User } from '../entities/User';
 
 export const addUser = async (
@@ -26,7 +26,7 @@ export const getTransactions = async (
     res: Response
 ): Promise<Response> => {
     const { uuid } = req.params;
-    const savedTransactions = await AppDataSource.manager.findBy(Transactions, {
+    const savedTransactions = await AppDataSource.manager.findBy(Transaction, {
         user: uuid,
     });
 
