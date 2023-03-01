@@ -12,7 +12,7 @@ export class Transactions {
     calculation: string
 
     @Column()
-    result: number
+    result: string
 
     @Column({ type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
     date_time_with_timezone: Date;
