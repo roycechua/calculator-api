@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { AppDataSource } from '../database';
-import { Transactions } from '../entities/Transactions';
+import { Transactions } from '../entities/Transaction';
 import { User } from '../entities/User';
 
 export const addUser = async (
