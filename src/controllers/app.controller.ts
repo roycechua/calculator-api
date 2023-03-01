@@ -42,7 +42,7 @@ export const addTransaction = async (
     const { uuid } = req.params;
     const { calculation, result } = req.body;
 
-    const newTransaction = new Transactions();
+    const newTransaction = new Transaction();
     newTransaction.user = uuid;
     newTransaction.calculation = calculation;
     newTransaction.result = result;
@@ -58,7 +58,7 @@ export const deleteTransactions = async (
 ): Promise<Response> => {
     const { uuid } = req.params;
 
-    await AppDataSource.manager.delete(Transactions, {
+    await AppDataSource.manager.delete(Transaction, {
         user: uuid,
     });
 
